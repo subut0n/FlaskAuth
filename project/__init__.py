@@ -6,8 +6,8 @@ from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
 
-import sentry_sdk
-from sentry_sdk.integrations.flask import FlaskIntegration
+# import sentry_sdk
+# from sentry_sdk.integrations.flask import FlaskIntegration
 
 
 
