@@ -19,17 +19,17 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
 
-    sentry_sdk.init(
-        dsn="https://62f8d8dea17c4a36a179f3abffed88d9@o1303935.ingest.sentry.io/6543498",
-        integrations=[
-            FlaskIntegration(),
-        ],
+    # sentry_sdk.init(
+    #     dsn="https://62f8d8dea17c4a36a179f3abffed88d9@o1303935.ingest.sentry.io/6543498",
+    #     integrations=[
+    #         FlaskIntegration(),
+    #     ],
 
-        # Set traces_sample_rate to 1.0 to capture 100%
-        # of transactions for performance monitoring.
-        # We recommend adjusting this value in production.
-        traces_sample_rate=1.0
-    )
+    #     # Set traces_sample_rate to 1.0 to capture 100%
+    #     # of transactions for performance monitoring.
+    #     # We recommend adjusting this value in production.
+    #     traces_sample_rate=1.0
+    # )
 
     app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("SQLALCHEMY_DATABASE_URI")
